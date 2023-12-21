@@ -22,7 +22,7 @@ user_balances = {}
 #{unique user id: {"balance":100, "person":["default person"]}, unique user id: {"balance":100, "person":["default person"]}, ...}
 person_pool = ["Alex","Ryan","Priscilla","Jackson","Holli","Nathan"]
 #adjective additional sell value will be equal to index of this list
-adjectives_pool = ["Default", "Homeless", "Dumb", "Boring", "Sleepy", "Smoll", "Tilted", "Large", "Biblically Accurate", "Goated"]
+adjectives_pool = ["Default", "Homeless", "Dumb", "Boring", "Sleepy", "Hungry", "Hairy", "Stinky", "Silly", "Emo", "K/DA", "Edgelord", "Roided", "Zombie", "Smoll", "Tilted", "Large", "Biblically Accurate", "Skibidi", "Goated"]
 
 
 def update_balance(id, amount, person_in):
@@ -53,7 +53,7 @@ async def pull(ctx):
     if user_id not in user_balances:
         update_balance(user_id, 0, '3 ★ Default Person')
 
-    bet = 15
+    bet = 10
 
     if bet > user_balances[user_id]["balance"]:
         await ctx.send("You're too poor to play.")
