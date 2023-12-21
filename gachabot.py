@@ -104,8 +104,9 @@ async def gacha_inv(ctx):
         await ctx.send("You are a new player. You have a 3 ★ Default Person to start.")
     else:
         for person in user_balances[user_id]["person"]:
-            output_str = person + ", "
+            output_str = output_str + person + "\n"
         await ctx.send(output_str)
+        
 
 if __name__ == "__main__" :
     load_balances()
